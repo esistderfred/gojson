@@ -65,6 +65,8 @@ func main() {
 	fnc = Convert
 
 	name := "config"
+	b := filepath.Base(filename)
+	name = strings.Replace(b, ".json", "", -1)
 
 	if fnc != nil {
 		fnc(outfile, content, name)
