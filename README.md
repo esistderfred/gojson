@@ -40,6 +40,8 @@ The program will create ```example.go```:
 ```golang
 package testdata
 
+import "time"
+
 // VENDOR implements json structure for vendor
 type VENDOR struct {
 	Name     string    `json:"name,omitempty"`
