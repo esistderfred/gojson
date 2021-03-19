@@ -12,7 +12,9 @@ func Convert(w io.Writer, s map[string]interface{}, name string) error {
 	for i, r := range s {
 		switch t := r.(type) {
 		case map[string]interface{}:
-			Convert(w, t, i)
+			if len(t) > 0 {
+				Convert(w, t, i)
+			}
 		}
 	}
 
@@ -24,7 +26,11 @@ func Convert(w io.Writer, s map[string]interface{}, name string) error {
 		jsoncomment := fmt.Sprintf("`json:\"%s,omitempty\"`", i)
 		switch t := r.(type) {
 		case map[string]interface{}:
-			fmt.Fprintln(w, "  ", getTitleName(i), "*"+getTypeName(i), jsoncomment)
+			if len(t) == 0 {
+				fmt.Fprintln(w, "  ", getTitleName(i), "map[string]interface{}", jsoncomment)
+			} else {
+				fmt.Fprintln(w, "  ", getTitleName(i), "*"+getTypeName(i), jsoncomment)
+			}
 		case string:
 			_, timeparseerror := time.Parse(time.RFC3339, t)
 			switch {
