@@ -1,0 +1,86 @@
+{
+    "device": {
+        "type": "SHSW-21",
+        "mac": "16324CAABBCC",
+        "hostname": "shelly1-B929CC"
+    },
+    "wifi_ap": {
+        "enabled": false,
+        "ssid": "shellyMODEL-16324CAABBCC",
+        "key": ""
+    },
+    "wifi_sta": {
+        "enabled": true,
+        "ssid": "Castle",
+        "ipv4_method": "dhcp",
+        "ip": null,
+        "gw": null,
+        "mask": null,
+        "dns": null
+    },
+    "wifi_sta1" : { 
+        "enabled": true,
+        "ssid": "Castle",
+        "ipv4_method": "dhcp",
+        "ip": null,
+        "gw": null,
+        "mask": null,
+        "dns": null
+    },
+    "ap_roaming": {
+        "enabled": false,
+        "threshold": -70
+    },
+    "mqtt": {
+        "enable": false,
+        "server": "192.168.33.3:1883",
+        "user": "",
+        "id": "shelly1-B929CC",
+        "reconnect_timeout_max": 60,
+        "reconnect_timeout_min": 2,
+        "clean_session": true,
+        "keep_alive": 60,
+        "max_qos": 0,
+        "retain": false,
+        "update_period": 30
+    },
+    "coiot": {
+        "enabled": true,
+        "update_period": 15,
+        "peer": ""
+    },
+    "sntp": {
+        "server": "time.google.com",
+        "enabled": true
+    },
+    "login": {
+        "enabled": false,
+        "unprotected": false,
+        "username": "admin"
+    },
+    "pin_code": "123456",
+    "name": "shellyMODEL-16324CAABBCC",
+    "fw": "20170427-114337/master@79dbb397",
+    "discoverable": true,
+    "build_info": {
+        "build_id": "20191112-140800",
+        "build_timestamp": "2019-11-12T14:08:00Z",
+        "build_version": "1.0"
+    },
+    "cloud": {
+        "enabled": true,
+        "connected": true
+    },
+    "timezone": "Europe/Sofia",
+    "lat": 42.1234,
+    "lng": 24.5678,
+    "tzautodetect": true,
+    "tz_utc_offset": 0,
+    "tz_dst": false,
+    "tz_dst_auto": true,
+    "time": "16:40",
+    "unixtime": 0,
+    "debug_enable": false,
+    "allow_cross_origin": false,
+    "wifirecovery_reboot_enabled": true
+}
