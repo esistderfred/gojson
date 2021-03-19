@@ -10,5 +10,7 @@
     "added": "2019-11-12T14:08:00Z",
     "priority": 12
   },
+  "alternative_names": ["object", "thing"],
+  "order": [1, 3, 5, 7, 9],
   "nullvalue": null
 }

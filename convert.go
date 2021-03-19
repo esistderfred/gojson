@@ -49,6 +49,12 @@ func Convert(w io.Writer, s map[string]interface{}, name string) error {
 			}
 		case bool:
 			fmt.Fprintln(w, "  ", getTitleName(i), "bool", jsoncomment)
+		case []string:
+			fmt.Fprintln(w, "  ", getTitleName(i), "[]string", jsoncomment)
+		case []float64:
+			fmt.Fprintln(w, "  ", getTitleName(i), "[]float64", jsoncomment)
+		case []interface{}:
+			fmt.Fprintln(w, "  ", getTitleName(i), "[]interface{}", jsoncomment)
 		default:
 			fmt.Fprintln(w, "  ", getTitleName(i), "interface{}", jsoncomment)
 		}
